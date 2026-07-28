@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base-black: #0A0A0A;
+  --color-base-charcoal: #141414;
+  --color-ash-light: #C7C7C7;
+  --color-ash: #8C8C8C;
+  --color-ash-dark: #2A2A2A;
+  --color-offwhite: #F5F5F5;
+
+  --font-sans: "Inter", sans-serif;
+}
+@keyframes grid-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+@keyframes blob-morph {
+  0%, 100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+  50% {
+    border-radius: 40% 60% 60% 40% / 50% 60% 40% 50%;
+  }
+}
+
+.blob-shape {
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+}
+
+.animate-blob {
+  animation: blob-morph 8s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 25s linear infinite;
+}
+
+@keyframes border-rotate {
+  100% {
+    --border-angle: 360deg;
+  }
+}
+
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.animated-border {
+  position: relative;
+  border-radius: 2rem;
+  background:
+    linear-gradient(#141414, #141414) padding-box,
+    conic-gradient(
+      from var(--border-angle),
+      #2a2a2a,
+      #8c8c8c,
+      #f5f5f5,
+      #8c8c8c,
+      #2a2a2a
+    ) border-box;
+  border: 1.5px solid transparent;
+  animation: border-rotate 4s linear infinite;
+}
