@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import GridBackground from '../components/GridBackground'
 import { AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function Home() {
     const roles = ['Full Stack Developer', 'Web Designer', 'Software Developer', 'MERN Stack Developer']
@@ -72,12 +73,12 @@ function Home() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex gap-4 mt-8"
         >
-          <a href="/projects" className="bg-offwhite text-base-black px-6 py-3 text-sm font-semibold uppercase tracking-wide hover:bg-ash-light transition-colors">
-            View My Work
-          </a>
-          <a href="/contact" className="border border-ash-dark text-offwhite px-6 py-3 text-sm font-semibold uppercase tracking-wide hover:border-ash transition-colors">
-            Contact Me
-          </a>
+          <Link to="/projects" className="bg-offwhite text-base-black px-6 py-3 text-sm font-semibold uppercase tracking-wide hover:bg-ash-light transition-colors">
+          View My Work
+        </Link>
+        <Link to="/contact" className="border border-ash-dark text-offwhite px-6 py-3 text-sm font-semibold uppercase tracking-wide hover:border-ash transition-colors">
+          Contact Me
+        </Link>
         </motion.div>
       </div>
 
