@@ -10,7 +10,7 @@ function CertificateCard({ certificate, index }) {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="group border border-ash-dark hover:border-ash transition-colors"
     >
-      <div className="aspect-[4/3] bg-base-charcoal overflow-hidden flex items-center justify-center">
+      <div className="aspect-video bg-base-charcoal overflow-hidden flex items-center justify-center">
         {certificate.image ? (
           <img src={certificate.image} alt={certificate.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
         ) : (
@@ -23,7 +23,7 @@ function CertificateCard({ certificate, index }) {
           {certificate.issuer}
         </p>
 
-        <h3 className="text-offwhite text-sm font-semibold mb-2 line-clamp-2">
+        <h3 className="text-offwhite text-base font-semibold mb-2 line-clamp-2">
           {certificate.title}
         </h3>
 
