@@ -148,6 +148,7 @@ function Contact() {
               )
             })}
           </div>
+          
         </motion.div>
       </div>
 
@@ -157,6 +158,7 @@ function Contact() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
+        {/*--------------------
         <h2 className="text-offwhite text-2xl font-bold mb-8 flex items-center gap-3">
           <MessageCircle size={22} /> Messages
         </h2>
@@ -193,6 +195,8 @@ function Contact() {
             )}
           </>
         )}
+          email off---------*/}
+
       </motion.div>
     </section>
   )
