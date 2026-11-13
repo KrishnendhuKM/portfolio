@@ -1,3 +1,4 @@
+
 export const projects = [
   {
     id: 1,
@@ -38,5 +39,19 @@ export const projects = [
     github: '',
     live: '',
     image: '/images/projects/project4.png',
+  },
+]
+
+// Personal Projects
+export const personalProjects = [
+  {
+    id: 1,
+    title: 'Selah — A Moment With His Word',
+    description:
+      'A Bible verse website designed to create a peaceful space for reading and reflecting on Scripture. Features daily Bible verses and an elegant, minimal interface for a distraction-free experience.',
+    tech: ['React.js', 'JavaScript', 'CSS', 'WEB Bible API'],
+    github: '',
+    live: 'https://selah-sigma-sage.vercel.app',
+    image: '/images/projects/selah.png',
   },
 ]
